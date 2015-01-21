@@ -1,0 +1,76 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Fare Ride</title> 
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="js/jquery-1.11.2.min.js"></script>
+  <script src="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script type="text/javascript" src = "js/sign-up.js"></script>
+  <script type="text/javascript" src="js/jquery-validation-1.13.1/dist/jquery.validate.min.js">
+  </script>
+  <script type="text/javascript" src="js/jquery.form.min.js"></script>
+  <link rel="stylesheet" href="js/jquery-validation-1.13.1/demo/css/screen.css">
+</head> 
+<body> 
+
+<div data-role="page">
+
+  <div data-role="header" data-theme="b">
+    <h1>Fare Ride</h1>
+    <a data-icon="back" data-rel="back" title="Go back">Back</a>
+  </div><!-- /header -->
+
+  <div data-role="content"> 
+    <h3>Sign Up</h3>
+      <form id="signUpForm" method="post" action="">
+        <fieldset>
+          <label for="txt_first_name">First Name</label>
+          <input type="text" name="txt_first_name" id="txt_first_name" required>
+          <label for="txt_last_name">Last Name</label>
+          <input type="text" name="txt_last_name" id="txt_last_name" required>
+          <label for="txt_email">Email Address</label>
+          <input type="email" name="txt_email" id="txt_email" required>
+          <label for="txt_password">Password</label>
+          <input type="password" name="txt_password" id="txt_password" required>
+          <label for="txt-password_confirm">Confirm Password</label>
+          <input type="password" name="txt-password_confirm" id="txt_password_confirm" required>
+          <!-- <a href="#" data-rel="popup" data-transition="pop" data-position-to="window" id="btn-submit" class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5">Submit</a> -->
+          <input class="submit" type="submit" value="Sign Up" data-theme="b">
+        </fieldset>
+      </form>
+
+        <div data-role="popup" id="dlg-sign-up-sent" data-dismissible="false" style="max-width:400px;">
+            <div data-role="header">
+                <h1>Almost done...</h1>
+            </div>
+            <div role="main" class="ui-content">
+                <h3>Confirm Your Email Address</h3>
+                <p>We sent you an email with instructions on how to confirm your email address. Please check your inbox and follow the instructions in the email.</p>
+                <div class="mc-text-center"><a href="sign-in.html" class="ui-btn ui-corner-all ui-shadow ui-btn-b mc-top-margin-1-5">OK</a></div>
+                    
+            </div>
+        </div>
+        <div data-role="popup" id="dlg-password-mismatch" data-dismissible="false" style="max-width:400px;">
+            <div data-role="header">
+                <h1>Something went wrong in our system</h1>
+            </div>
+            <div role="main" class="ui-content">
+                <h3>Awww!</h3>
+                <p>There seems to be a problem with the system, we may be down for maintainance. Please try again later.</p>
+                <div class="mc-text-center"><a href="sign-up.html" class="ui-btn ui-corner-all ui-shadow ui-btn-b mc-top-margin-1-5">OK</a></div>
+                    
+            </div>
+        </div>
+    
+  </div><!-- /content -->
+
+  <div data-role="footer" data-position="fixed" data-theme="b">
+    <h4></h4>
+  </div><!-- /footer -->
+</div><!-- /page -->
+
+</body>
+</html>

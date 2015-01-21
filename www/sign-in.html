@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Fare Ride</title> 
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  
+  <link rel="stylesheet" href="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" />
+  <link rel="stylesheet" href="css/sign-in.css">
+
+  <script src="js/jquery-1.11.2.min.js"></script>
+  <script src="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script type="text/javascript" src = "js/sign-in.js"></script>
+  <script type="text/javascript" src="js/jquery-validation-1.13.1/dist/jquery.validate.min.js"></script>
+  
+</head> 
+<body> 
+
+<div data-role="page">
+
+  <div data-role="header" data-theme="b">
+    <h4>Fare Ride</h4>
+    <a data-icon="back" data-rel="back" title="Go back">Back</a>
+  </div><!-- /header -->
+
+  <div data-role="content"> 
+    <h3>Sign In</h3>
+            <form id="signInForm" method="post" action="">
+              <fieldset>
+                <label for="txt_email">Email Address</label>
+                <input type="text" name="txt_email" id="txt_email">
+                <div class="txt_email_error"></div>
+                <label for="txt_password">Password</label>
+                <input type="password" name="txt_password" id="txt_password">
+                <div class="txt_password_error"></div>
+                <br/>
+                <input class="submit" type="submit" value="Sign In" data-theme="b">
+                <p class="mc-top-margin-1-5"><a href="begin-password-reset.html">Forgot Password?</a></p>  
+              </fieldset>
+            </form>
+            
+            <div data-role="popup" id="dlg-invalid-credentials" data-dismissible="false" style="max-width:400px;">
+                <div role="main" class="ui-content">
+                    <h3 class="mc-text-danger">Login Failed</h3>
+                    <p>Did you enter the right credentials?</p>
+                    <div class="mc-text-center"><a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b mc-top-margin-1-5">OK</a></div>
+                </div>
+            </div>
+    
+  </div><!-- /content -->
+
+  <div data-role="footer" data-position="fixed" data-theme="b">
+    <h4></h4>
+  </div><!-- /footer -->
+</div><!-- /page -->
+
+</body>
+</html>

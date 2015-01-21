@@ -1,0 +1,93 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Fare Ride</title> 
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+	<!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+
+	<link rel="stylesheet" href="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" />
+  	<script src="js/jquery-1.11.2.min.js"></script>
+  	<script src="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript" src="js/geo.js" ></script>
+	<script type="text/javascript" src="js/underscore1.7.0-min.js"></script>
+
+	<style type="text/css">
+    
+    /*body {
+            background: url(images/taxi_background_1.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+    }
+
+    .ui-page, .ui-content, .ui-btn {
+      background: transparent;
+    }*/
+
+  </style>
+</head> 
+<body> 
+
+<div data-role="page">
+
+	<div data-role="header"  data-theme="b">
+		<h1>Fare Ride</h1>
+		<a data-icon="back" data-rel="back" title="Go back">Back</a>
+		<a href="home.html" class="ui-btn-right" data-icon="home" data-iconpos="notext" 
+           data-direction="reverse">Home</a> 
+	</div><!-- /header -->
+
+	<div data-role="content" style="
+		   	padding-top: 0px;
+		    padding-right: 0px;
+		    padding-bottom: 0px;
+		    padding-left: 0px;
+	">	
+		 <div data-role="collapsible-set">
+		 	<div data-role="collapsible" data-collapsed="false">
+		 		<div data-role="collapsible" data-collapsed="false" id="cheapestRide">
+					<h3>Cheapest Ride</h3>
+						<form method="post" action="demoform.asp">
+				      		<label for="source">Going from:</label>
+				      		<input type="text" name="source" id="source" placeholder = "Eg : Worli, Mumbai">
+				      		<input type="hidden"id="usingCurrentLocation" value="no" />
+				      		<input data-mini="true" type="button" value="Use my current location" id="useCurrentLocation"/>
+				      		<label for="dest">Going to:</label>
+				      		<input type="text" name="dest" id="dest" placeholder = "Eg : Chakala, Andheri"/>
+				      		<fieldset data-role="controlgroup" id="pickupTime">
+  								<legend>Choose Pickup Time:</legend>
+  								<input type="radio" name="radio-choice" id="daytime" value="day" checked="checked">
+							  <label for="daytime">Between 5am - 12am</label>
+							  <input type="radio" name="radio-choice" id="nighttime" value="night">
+							  <label for="nighttime">Between 12am - 5am</label>
+							</fieldset>
+				      		<input type="button" value="Calculate" id="calculateOptions"/>
+		     			</form>
+				</div>
+					
+				<div data-role="collapsible" id="ridingOptions">
+					<h3>Riding Options</h3>
+					<p>
+						Distance    : <span id="distance">Please enter data </span>,
+               		 	Travel Time : <span id="travelTime">Please enter data </span>
+					</p>
+	               		
+	               	<ul data-role="listview"  id="rideWiseList" data-filter="true" data-filter-placeholder = "Search cabs.." data-inset="true">
+	               	</ul>
+	               		
+				</div>
+	     	</div>
+		 </div>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed"  data-theme="b">
+		<h4></h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+</body>
+</html>

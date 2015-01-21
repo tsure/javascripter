@@ -1,0 +1,54 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Fare Ride</title> 
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="js/jquery-1.11.2.min.js"></script>
+  <script src="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <style type="text/css">
+    
+    body {
+            background: url(images/taxi_background_1.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+    }
+
+    .ui-page, .ui-content, .ui-btn {
+      background: transparent;
+    }
+
+  </style>
+  
+</head> 
+<body> 
+
+<div data-role="page" data-theme="b">
+
+  <div data-role="header">
+    <h1>Fare Ride</h1>
+    <a href="home.html" class="ui-btn-left" data-icon="home" data-iconpos="notext" 
+           data-direction="reverse">Home</a> 
+
+  </div><!-- /header -->
+
+  <div data-role="content" data-theme="a"> 
+    
+    <a href="fareride.html" data-ajax="false" class="ui-btn ui-corner-al">Get a Fare Ride</a> <br/>
+    <a href="taxicontacts.html" data-ajax="false" class="ui-btn ui-corner-al">Get a Ride</a> <br/>
+    <a href="taxiserviceratinglist.html" class="ui-btn ui-corner-al">Rate a Ride</a> <br/>
+    <a href="reviews.html" class="ui-btn ui-corner-al">Review Available Rides</a> <br/>
+    
+    
+  </div><!-- /content -->
+
+  <div data-role="footer" data-position="fixed">
+    <h4></h4>
+  </div><!-- /footer -->
+</div><!-- /page -->
+
+</body>
+</html>
