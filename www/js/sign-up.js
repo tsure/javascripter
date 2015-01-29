@@ -35,7 +35,7 @@ $(function () {
                     contentType:"application/json",
                     dataType : "json",
                     crossDomain: true,
-                    url: "http://127.0.0.1:3000/users/createuser",
+                    url: "http://taxiapp.azurewebsites.net/users/createuser",
                     data: JSON.stringify(data)
                 })
                 .done(function( msg ) {
