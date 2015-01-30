@@ -16,6 +16,7 @@
   <script src="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
   <script src="js/infragistics.js"></script>
   <script type="application/javascript" src="js/rating.js" ></script>
+  <!--<script type="application/javascript" src="js/date.js" ></script> -->
 
   <style>
 
@@ -59,8 +60,9 @@
             <div id="htmlRating" data-role="igrating" data-value="2"></div>
             <br/>
             <label for="textarea">Your Comments for the service:</label>
-            <textarea cols="40" rows="60" name="textarea" id="bookmycabcomments"></textarea>
+            <textarea cols="40" rows="60" name="textarea" id="comment"></textarea>
             <br/>
+            <input type="hidden" value="bookmycab.com" id="serviceName" />
             <input type="button" value="Submit" id="saveRatings"/>
     </div>
             

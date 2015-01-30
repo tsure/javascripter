@@ -6,14 +6,15 @@
 
      $("#saveRatings").on("click", function(){
          var ratingValue = $("#htmlRating").igRating("option","value");
-         var comment = $("#bookmycabcomments").val();
+         var comment = $("#comment").val();
          if(comment === "") {
          	comment = "N/A";
          }
+         var serviceName = $("#serviceName").val();
          var data = {
           "ratingNumber" : ratingValue,
           "comment" : comment,
-          "serviceName" : "bookmycab.com"
+          "serviceName" : serviceName
 
          };
           //alert("Rating value = "+ratingValue+" Comments = "+comment);

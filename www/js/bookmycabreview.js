@@ -3,6 +3,13 @@
         var data = {
           "serviceName" : "bookmycab.com"
         };
+        //show the loading icon
+        $.mobile.loading( "show", {
+                  text: "Loading reviews...",
+                  textVisible: true,
+                  theme: "z",
+                  html: ""
+        });
         $.ajax({
                   type: "POST",
                   contentType:"application/json",
@@ -12,25 +19,24 @@
                   data: JSON.stringify(data)
             })
             .done(function(response) {
-                //$.mobile.loading( "hide" );
+                $.mobile.loading( "hide" );
                 //alert(response);
                 $.each(response, function(index, review){
                   var reviewObj = review;
                   var rating = reviewObj.ratingNumber;
                   var comment = reviewObj.comment;
-                  var showReviewAndComment = "Rating : "+rating+ "<p>"+comment+"</p>";
+                  var dateWhenRated = reviewObj.dateOfRating;
+                  var showReviewAndComment = "Rating : "+rating+ "<p>"+comment+"</p><p>"+String(new Date(dateWhenRated))+"</p>";
                   $("#reviewList").append('<li>'+showReviewAndComment+'</li>');
                 });
-                //window.location = "home.html";
                 $('#reviewList').listview('refresh');
-
             })
             .fail(function (){
-                //$.mobile.loading( "hide" ); 
+                $.mobile.loading( "hide" ); 
 
              })
              .always(function(){
-                //$.mobile.loading( "hide" );
+                $.mobile.loading( "hide" );
              });
 
 });

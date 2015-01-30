@@ -10,6 +10,17 @@
   <script src="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
   <script src="js/bookmycabreview.js"></script>
 
+  <style>
+
+    .center-wrapper{
+      text-align: center;
+    }
+    .center-wrapper * {
+      margin: 0 auto;
+    }
+
+  </style>
+
 </head> 
 <body> 
 
@@ -22,10 +33,13 @@
            data-direction="reverse">Home</a> 
   </div><!-- /header -->
 
-  <div data-role="content"> 
-    <img src="images/bookmycab_logo.jpg" style="height:100px;width:150px; margin: auto 100px"></img> <br/>
+  <div data-role="content">
+    <div class="center-wrapper">
+      <img src="images/bookmycab_logo.jpg" style="height:100px;width:150px;"></img> <br/> <!--  margin: auto 100px-->
     
      <ul data-role="listview" id="reviewList" style="margin:10px auto"></ul>
+    </div> 
+    
   </div><!-- /content -->
 
   <div data-role="footer" data-position="fixed" data-theme="b">
