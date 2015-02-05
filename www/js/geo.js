@@ -62,14 +62,16 @@
                         olaSedanCost = 150 + (distance - 7.14)*21;
                         olaSedanCost = olaSedanCost.toFixed(2);
                     }
-                    olaSedan.type = "OLA Sedan";
+                    olaSedan.logo='<img src="images/ola.jpg"></img>';
+                    olaSedan.type = "Sedan";
                     olaSedan.cost = olaSedanCost;
                     cabCosts.push(olaSedan);
                     
                     //For OLA Mini
                     var olaMiniCost;
                     var olaMini = {};
-                    olaMini.type = "OLA Mini";
+                    olaMini.logo='<img src="images/ola.jpg"></img>';
+                    olaMini.type = "Mini";
                     if(distance <= 4) {
                         olaMiniCost = 100;
                     } else {
@@ -83,13 +85,14 @@
                     var olaPrimeCost;
                     var olaPrime = {};
 
-                    olaPrime.type = "OLA Prime";
+                    olaPrime.type = "Prime";
                     if(distance <= 5) {
                         olaPrimeCost = 200;
                     } else {
                         olaPrimeCost = 200 + (distance - 5)*17;
                         olaPrimeCost = olaPrimeCost.toFixed(2);
                     }
+                    olaPrime.logo='<img src="images/ola.jpg"></img>';
                     olaPrime.cost = olaPrimeCost;
                     cabCosts.push(olaPrime);
             }
@@ -103,7 +106,7 @@
                         var listItemHtml;
                         var bmcACCost;
                         var bmcAC = {};
-                        bmcAC.type = "bookmycab.com A/C Cool Cabs";
+                        bmcAC.type = "A/C Cool Cabs";
 
                         if(distance <= 1.5) {
                             bmcACCost = 26;
@@ -111,18 +114,20 @@
                             bmcACCost = 26 + (distance - 1.5)*17.50;
                             bmcACCost = bmcACCost.toFixed(2);
                         }
+                        bmcAC.logo='<img src="images/bookmycab_logo.jpg"></img>';
                         bmcAC.cost = bmcACCost;
                         cabCosts.push(bmcAC);
                         
                         var bmcCost;
                         var bmcNonAc = {};
-                        bmcNonAc.type = "bookmycab.com Kali Peeli";
+                        bmcNonAc.type = "Kali Peeli";
                         if(distance <= 1.5) {
                             bmcCost = 21;
                         } else {
                             bmcCost = 21 + (distance - 1.5)*14;
                             bmcCost = bmcCost.toFixed(2);
                         }
+                        bmcNonAc.logo='<img src="images/bookmycab_logo.jpg"></img>';
                         bmcNonAc.cost = bmcCost;
                         cabCosts.push(bmcNonAc);
 
@@ -131,20 +136,20 @@
                         var listItemHtml;
                         var bmcACCost;
                         var bmcAC = {};
-                        bmcAC.type = "bookmycab.com A/C Cool Cabs"
+                        bmcAC.type = "A/C Cool Cabs"
                         if(distance <= 1.5) {
                             bmcACCost = 26 + (0.25*23);
                         } else {
                             bmcACCost = (26 + (distance - 1.5)*17.50)*1.25;
                             bmcACCost = bmcACCost.toFixed(2);
                         }
-
+                        bmcAC.logo='<img src="images/bookmycab_logo.jpg"></img>';
                         bmcAC.cost = bmcACCost;
                         cabCosts.push(bmcAC);
                         
                         var bmcCost;
                         var bmcNonAc = {};
-                        bmcNonAc.type = "bookmycab.com Non A/C Kali Peeli";
+                        bmcNonAc.type = "Kali Peeli";
                         if(distance <= 1.5) {
                             bmcCost = 21 + (0.25*21);
                             bmcCost = bmcCost.toFixed(2);
@@ -152,10 +157,9 @@
                             bmcCost = (21 + (distance - 1.5)*14)*1.25;
                             bmcCost = bmcCost.toFixed(2);
                         }
-
+                        bmcNonAc.logo='<img src="images/bookmycab_logo.jpg"></img>';
                         bmcNonAc.cost = bmcCost;
                         cabCosts.push(bmcNonAc);
-
                     }
                      
             }
@@ -169,21 +173,21 @@
                         var listItemHtml;
                         var tfsHatchBackCost;
                         var tfsHatchBack = {};
-                        tfsHatchBack.type = "Taxi For Sure Hatchback";
+                        tfsHatchBack.type = "Hatchback";
                         if(distance <= 6) {
                             tfsHatchBackCost = 150;
                         } else{
                             tfsHatchBackCost = 150+ (distance - 6)*15;
                             tfsHatchBackCost = tfsHatchBackCost.toFixed(2);
                         }
-
+                        tfsHatchBack.logo = '<img src="images/taxiforsure_logo.png"></img>';
                         tfsHatchBack.cost = tfsHatchBackCost;
                         cabCosts.push(tfsHatchBack);
                         //For Sedan
                         var tfsSedanCost;
                         var tfsSedan = {};
 
-                        tfsSedan.type = "Taxi For Sure Sedan";
+                        tfsSedan.type = "Sedan";
 
                         if(distance <= 6) {
                             tfsSedanCost = 150;
@@ -191,7 +195,7 @@
                             tfsSedanCost = 150 + (distance - 6)*18;
                             tfsSedanCost = tfsSedanCost.toFixed(2);
                         }
-
+                        tfsSedan.logo = '<img src="images/taxiforsure_logo.png"></img>';
                         tfsSedan.cost = tfsSedanCost;
                         cabCosts.push(tfsSedan);
 
@@ -199,7 +203,7 @@
                         var tfsSuvCost;
                         var tfsSuv = {};
 
-                        tfsSuv.type = "Taxi For Sure SUV";
+                        tfsSuv.type = "SUV";
 
                         if(distance <= 6) {
                             tfsSuvCost = 200;
@@ -207,7 +211,7 @@
                             tfsSuvCost = 200 + (distance - 6)*21;
                             tfsSuvCost = tfsSuvCost.toFixed(2);
                         }
-
+                        tfsSuv.logo = '<img src="images/taxiforsure_logo.png"></img>';
                         tfsSuv.cost = tfsSuvCost;
                         cabCosts.push(tfsSuv);
 
@@ -218,7 +222,7 @@
                         var tfsHatchBackCost;
                         var tfsHatchBack = {};
 
-                        tfsHatchBack.type = " Taxi For Sure Hatchback";
+                        tfsHatchBack.type = " Hatchback";
 
                         if(distance <= 6) {
                             tfsHatchBackCost = 185;
@@ -226,14 +230,14 @@
                             tfsHatchBackCost = 185+ (distance - 6)*18;
                             tfsHatchBackCost = tfsHatchBackCost.toFixed(2);
                         }
-
+                        tfsHatchBack.logo = '<img src="images/taxiforsure_logo.png"></img>';
                         tfsHatchBack.cost = tfsHatchBackCost;
                         cabCosts.push(tfsHatchBack);
 
                         //For Sedan
                         var tfsSedanCost;
                         var tfsSedan = {};
-                        tfsSedan.type = "Taxi For Sure Sedan";
+                        tfsSedan.type = "Sedan";
 
                         if(distance <= 6) {
                             tfsSedanCost = 185;
@@ -241,13 +245,14 @@
                             tfsSedanCost = 185 + (distance - 6)*22;
                             tfsSedanCost = tfsSedanCost.toFixed(2);
                         }
+                        tfsSedan.logo = '<img src="images/taxiforsure_logo.png"></img>';
                         tfsSedan.cost = tfsSedanCost;
                         cabCosts.push(tfsSedan);
 
                         //For SUV
                         var tfsSuvCost;
                         tfsSuv = {};
-                        tfsSuv.type = "Taxi For Sure SUV";
+                        tfsSuv.type = "SUV";
 
                         if(distance <= 6) {
                             tfsSuvCost = 250;
@@ -255,6 +260,7 @@
                             tfsSuvCost = 250 + (distance - 6)*26;
                             tfsSuvCost = tfsSuvCost.toFixed(2);
                         }
+                        tfsSuv.logo = '<img src="images/taxiforsure_logo.png"></img>';
                         tfsSuv.cost = tfsSuvCost;
                         cabCosts.push(tfsSuv);
 
@@ -275,6 +281,7 @@
                         tabCabCost = 27 + (distance - 1)*20;
                         tabCabCost = tabCabCost.toFixed(2);
                     }
+                    tabCab.logo = '<img src="images/tabcab_logo.jpg"></img>';
                     tabCab.cost = tabCabCost;
                     cabCosts.push(tabCab);
 
@@ -285,6 +292,7 @@
                         tabCabCost = 33.75 + (distance - 1)*25;
                         tabCabCost = tabCabCost.toFixed(2);
                     }
+                    tabCab.logo = '<img src="images/tabcab_logo.jpg"></img>';
                     tabCab.cost = tabCabCost;
                     cabCosts.push(tabCab);
                 }
@@ -303,6 +311,7 @@
                         meeruCost = 27 + (distance - 1)*20;
                         meeruCost = meeruCost.toFixed(2);
                     }
+                    meeru.logo = '<img src="images/meeru_logo.png"></img>';
                     meeru.cost = meeruCost;
                     cabCosts.push(meeru);
 
@@ -313,6 +322,7 @@
                         meeruCost = 33.75 + (distance - 1)*25;
                         meeruCost = meeruCost.toFixed(2);
                     }
+                    meeru.logo = '<img src="images/meeru_logo.png"></img>';
                     meeru.cost = meeruCost;
                     cabCosts.push(meeru);
                 }
@@ -355,7 +365,7 @@
                 var listItemHtml;
                 var sortedCosts = _.sortBy(cabCosts,'cost');
                 $.each(sortedCosts, function(i,currCab){
-                listItemHtml = '<li data-icon="phone"> <a href="#">'+currCab.type+' <span class="ui-li-count"> Rs '+currCab.cost+'</span></a></li>';
+                listItemHtml = '<li data-icon="phone"> <a href="#">'+currCab.logo+" "+currCab.type+' <span class="ui-li-count"> Rs '+currCab.cost+'</span></a></li>';
                 $("#rideWiseList").append(listItemHtml);
 
                 });
@@ -381,7 +391,7 @@
                     });
                     
                 } else {
-                    console.log("Current location Not Found !");
+                    //console.log("Current location Not Found !");
                     $("#source").val("latitude and longitude not found");
                 }
 

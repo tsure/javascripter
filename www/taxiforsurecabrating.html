@@ -25,7 +25,7 @@
       margin: 0 auto;
     }
 
-    body {
+   /* body {
             background: url(images/taxi_background_3.jpg);
             background-repeat: no-repeat;
             background-size: 100% 100%;
@@ -33,7 +33,7 @@
 
     .ui-page, .ui-content, .ui-btn {
       background: transparent;
-    }
+    }*/
 
   </style>
   
@@ -44,28 +44,29 @@
 
         
 
-  <div data-role="header">
+  <div data-role="header"  data-theme="b">
     <h1>Fare Ride</h1>
     <a data-icon="back" data-rel="back" title="Go back">Back</a>
     <a href="home.html" class="ui-btn-right" data-icon="home" data-iconpos="notext" 
            data-direction="reverse">Home</a> 
   </div><!-- /header -->
 
-  <div data-role="content" data-theme="b"> 
+  <div data-role="content"> 
     <div class="center-wrapper">
             <img src="images/taxiforsure_logo.png" style="height:100px;width:150px"></img>
             <br/>
             <div id="htmlRating" data-role="igrating" data-value="2"></div>
             <br/>
             <label for="textarea">Your Comments for the service:</label>
-            <textarea cols="40" rows="60" name="textarea" id="taxiforsurecomments"></textarea>
+            <textarea cols="40" rows="60" name="textarea" id="comment"></textarea>
             <br/>
+            <input type="hidden" value="taxiforsure" id="serviceName" />
             <input type="button" value="Submit" id="saveRatings"/>
     </div>
             
   </div><!-- /content -->
 
-  <div data-role="footer" data-position="fixed">
+  <div data-role="footer" data-position="fixed"  data-theme="b">
     <h4></h4>
   </div><!-- /footer -->
 </div><!-- /page -->

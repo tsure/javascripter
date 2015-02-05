@@ -12,14 +12,13 @@ $(function () {
                 },
                 txt_password:"required",
                 txt_password_confirm : {
-                    required : true,
+                    //required : true,
                     equalTo : "#txt_password"
                 }
 
             },
             submitHandler: function(form) {
 
-                
                 var data = {
 
                     "firstname" : $("#txt_first_name").val(),
@@ -28,8 +27,13 @@ $(function () {
                     "password": $("#txt_password").val()
 
                 }
-
-                //save the user details.
+                 //save the user details.
+                $.mobile.loading( "show", {
+                  text: "Saving your data ...",
+                  textVisible: true,
+                  theme: "b",
+                  html: ""
+                });
                 $.ajax({
                     type: "POST",
                     contentType:"application/json",
@@ -39,14 +43,15 @@ $(function () {
                     data: JSON.stringify(data)
                 })
                 .done(function( msg ) {
+                   $.mobile.loading("hide");
                    window.location = "home.html"; 
                 })
                 .fail(function (){
-                    
+                   $.mobile.loading("hide"); 
 
                 })
                 .always(function(){
-
+                   $.mobile.loading("hide"); 
                 });
 
             } 

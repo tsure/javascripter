@@ -11,12 +11,12 @@
 
   <style type="text/css">
     
-    body {
-            /*background: url(images/taxi_background_1.jpg);
+    /*body {
+            background: url(images/taxi_background_1.jpg);
             background-repeat: no-repeat;
-            background-size: 100% 100%;*/
+            background-size: 100% 100%;
             background-color: #FFECAE;
-    }
+    }*/
 
     /*.ui-page, .ui-content, .ui-btn {
       background: transparent;
@@ -27,24 +27,24 @@
 </head> 
 <body> 
 
-<div data-role="page" data-theme="b">
+<div data-role="page" >
 
-  <div data-role="header">
+  <div data-role="header" data-theme="b">
     <h1>Fare Ride</h1>
     <a href="home.html" class="ui-btn-left" data-icon="home" data-iconpos="notext" 
            data-direction="reverse">Home</a> 
   </div><!-- /header -->
 
-  <div data-role="content" data-theme="a"> 
+  <div data-role="content"> 
     <div id="servicesMenu" style="margin: 60px 25px;">
-      <a href="fareride.html" data-ajax="false" class="ui-btn ui-corner-al">Get a Fare Ride</a> <br/>
-      <a href="taxicontacts.html" data-ajax="false" class="ui-btn ui-corner-al">Get a Ride</a> <br/>
-      <a href="taxiserviceratinglist.html" class="ui-btn ui-corner-al">Rate a Ride</a> <br/>
-      <a href="reviews.html" class="ui-btn ui-corner-al">Review Available Rides</a> <br/>
+      <a href="fareride.html" data-ajax="false" class="ui-btn ui-corner-al ui-btn-b" >Call a Fare Ride</a> <br/>
+      <a href="taxicontacts.html" data-ajax="false" class="ui-btn ui-corner-al ui-btn-b">Call a Ride</a> <br/>
+      <a href="taxiserviceratinglist.html" class="ui-btn ui-corner-al ui-btn-b" >Rate a Ride</a> <br/>
+      <a href="reviews.html" class="ui-btn ui-corner-al ui-btn-b">Review Available Rides</a> <br/>
     </div>
   </div><!-- /content -->
 
-  <div data-role="footer" data-position="fixed">
+  <div data-role="footer" data-position="fixed" data-theme="b">
     <h4></h4>
   </div><!-- /footer -->
 </div><!-- /page -->

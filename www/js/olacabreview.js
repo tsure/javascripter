@@ -1,7 +1,7 @@
  $(function () {
     
         var data = {
-          "serviceName" : "bookmycab.com"
+          "serviceName" : "olacabs"
         };
         //show the loading icon
         $.mobile.loading( "show", {
@@ -48,5 +48,5 @@ function buildStarsToShowRating(rating) {
     startHtml += '<img src="images/reviewstarsmall.png" style="position:relative"></img>'
   }
   return startHtml;
-}    
+}   
 

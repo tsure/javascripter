@@ -31,7 +31,7 @@ $(document).on('pageinit', function () {
                 $.mobile.loading( "show", {
                   text: "Verifying Credentials",
                   textVisible: true,
-                  theme: "z",
+                  theme: "b",
                   html: ""
                 });
                 //save the user details.
@@ -49,7 +49,7 @@ $(document).on('pageinit', function () {
                 })
                 .fail(function (){
                    $.mobile.loading( "hide" ); 
-
+                   $("#dlg-invalid-credentials").popup("open");
                 })
                 .always(function(){
                     $.mobile.loading( "hide" );
